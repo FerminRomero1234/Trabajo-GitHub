@@ -185,3 +185,16 @@ a{
 }
 
 /* Fin de header */
+
+.carusel {
+    width: 100%;
+    background-color: #D1E7F2;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: #A2DCF2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
