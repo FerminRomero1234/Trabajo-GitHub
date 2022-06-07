@@ -1,26 +1,26 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
 @font-face {
-    font-family: "Roboto",sans-serif;
+    font-family: "Roboto", sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-} 
+}
 
 
 
 /* Comienzo de header */
 
-.header{
+.header {
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
     align-items: center;
     background-color: #111440;
     color: white;
-    flex-wrap: wrap;    
-   
+    flex-wrap: wrap;
+
 }
 
 .icono-mistica {
@@ -31,27 +31,27 @@
 
 }
 
-.mi-cuenta-index{
+.mi-cuenta-index {
     margin-left: 100rem;
     display: grid;
     grid-template-columns: 50fr;
     flex-direction: column;
-    align-items: center; 
- 
+    align-items: center;
+
 }
 
-.lista-header{
+.lista-header {
     list-style: none;
-  
+
 }
 
 /* Fin de Header */
 
 /* Cominezo de section */
 
-.lista-htmls{
+.lista-htmls {
     display: grid;
-    grid-template-columns: repeat(7, 1fr) ;
+    grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 40px;
     gap: 20px;
     justify-content: space-around;
@@ -61,24 +61,25 @@
     font-size: 2rem;
     background-color: #A2DCF2;
     padding: 0.5rem;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1{
+h1 {
     text-align: center;
     padding: 4rem;
     color: #111440;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #D1E7F2;
 }
 
 /* comienzo del main */
 
-.modelo, .precio{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+.modelo,
+.precio {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.item-contenedor{
+.item-contenedor {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
@@ -86,19 +87,19 @@ h1{
     grid-gap: 10px;
     padding-bottom: 10rem;
     padding-left: 1rem;
-    background-color:#D1E7F2;
+    background-color: #D1E7F2;
 
 }
 
-.contenedor-padre{
+.contenedor-padre {
     display: grid;
-    grid-template-columns: repeat(5, 350fr) ;
+    grid-template-columns: repeat(5, 350fr);
     grid-auto-rows: 1fr;
     object-fit: cover;
     gap: 10px;
-    justify-content: space-around; 
+    justify-content: space-around;
     padding-bottom: 10rem;
-    background-color:#D1E7F2;
+    background-color: #D1E7F2;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
 }
@@ -129,8 +130,8 @@ h1{
     grid-template-columns: repeat(3, 350fr);
     grid-template-rows: 350fr;
     justify-content: space-around;
-    
-    
+
+
 }
 
 
@@ -139,52 +140,54 @@ h1{
 
 /* Comienzo de footer */
 
-.footer{
+.footer {
     background-color: #111440;
     color: white;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 4rem;
     
+
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.footer-lista{
+.footer-lista {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-content: space-between;
-}
-
-.contenedor-footer{
-    display: grid;
-    grid-template-columns: auto auto;
     
 }
 
-.conectate{
+.contenedor-footer {
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+.conectate {
     margin: auto;
 }
 
-.imagen-redes{
+.imagen-redes {
     padding: 0.5rem 0.5rem 0.5rem 0rem;
 }
 
-.seccion{
+.seccion {
     background-color: #D1E7F2;
     padding-bottom: 10rem;
 }
 
 
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-/* Fin de header */
+/* Fin de footer */
 
 .carusel {
     width: 100%;
@@ -194,7 +197,34 @@ a{
 
 .navbar {
     background-color: #A2DCF2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+}
+
+body {
+    background-color: #D1E7F2;
+}
+
+@media screen and (max-width: 600px) {
+     .container {
+        height: 80vh;
+        display: grid;
+        grid-template-areas: 
+            "img-1"
+            "img-2"
+            "img-3"
+            "img-4"
+            "img-5";
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        
+        
+
+        
+    }
+    
+
 }
