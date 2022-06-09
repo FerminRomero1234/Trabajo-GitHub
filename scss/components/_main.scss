@@ -1,0 +1,9 @@
+.h1 {
+    background-color: nth($colores,2);
+    color: $color-mistica;
+    @include header (4rem, flex, center, none, center)
+}
+
+body {
+    background-color: nth($colores, 2);
+}

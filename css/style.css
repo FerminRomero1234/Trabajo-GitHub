@@ -1,230 +1,92 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-@font-face {
-    font-family: "Roboto", sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-}
-
-
-
-/* Comienzo de header */
-
 .header {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #111440;
-    color: white;
-    flex-wrap: wrap;
-
-}
+  background-color: #111440;
+  color: white;
+  padding: 0px;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  align-items: center; }
 
 .icono-mistica {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    flex-wrap: wrap;
-
-}
+  padding: 0px;
+  display: grid;
+  justify-content: none;
+  grid-template-columns: auto;
+  align-items: center; }
 
 .mi-cuenta-index {
-    margin-left: 100rem;
-    display: grid;
-    grid-template-columns: 50fr;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.lista-header {
-    list-style: none;
-
-}
-
-/* Fin de Header */
-
-/* Cominezo de section */
-
-.lista-htmls {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 40px;
-    gap: 20px;
-    justify-content: space-around;
-    text-decoration: none;
-    list-style: none;
-    color: white;
-    font-size: 2rem;
-    background-color: #A2DCF2;
-    padding: 0.5rem;
-    font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-    text-align: center;
-    padding: 4rem;
-    color: #111440;
-    font-family: 'Roboto', sans-serif;
-    background-color: #D1E7F2;
-}
-
-/* comienzo del main */
-
-.modelo,
-.precio {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.item-contenedor {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: space-around;
-    grid-gap: 10px;
-    padding-bottom: 10rem;
-    padding-left: 1rem;
-    background-color: #D1E7F2;
-
-}
-
-.contenedor-padre {
-    display: grid;
-    grid-template-columns: repeat(5, 350fr);
-    grid-auto-rows: 1fr;
-    object-fit: cover;
-    gap: 10px;
-    justify-content: space-around;
-    padding-bottom: 10rem;
-    background-color: #D1E7F2;
-    grid-column: 1 / 5;
-    grid-row: 1 / 2;
-}
-
-.camiseta:hover {
-    transition-property: all;
-    transition-duration: 2s;
-    transition: all 2s;
-    transform: scale(1.1);
-
-}
-
-
-/* Este es el grid de camperas */
-
-.contenedor-camperas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 350fr;
-    gap: 10px;
-    justify-content: space-around;
-}
-
-/* Este es el grid de shorts, estos dps son distintos al resto porque tienen 3 imagenes solamente. */
-
-.contenedor-shorts {
-    display: grid;
-    grid-template-columns: repeat(3, 350fr);
-    grid-template-rows: 350fr;
-    justify-content: space-around;
-
-
-}
-
-
-
-/* Fin de section */
-
-/* Comienzo de footer */
+  margin-left: 100rem;
+  padding: none;
+  display: grid;
+  justify-content: none;
+  grid-template-columns: 50fr;
+  align-items: center; }
 
 .footer {
-    background-color: #111440;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    padding: 4rem;
-    
+  background-color: #111440;
+  color: white;
+  padding: 4rem; }
 
-}
-
-ul {
-    list-style: none;
-}
+.ul {
+  list-style: none; }
 
 .footer-lista {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-content: space-between;
-    
-}
+  padding: 0px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  align-items: none; }
 
 .contenedor-footer {
-    display: grid;
-    grid-template-columns: auto auto;
-
-}
+  display: grid;
+  grid-template-columns: auto auto; }
 
 .conectate {
-    margin: auto;
-}
+  margin: auto; }
 
 .imagen-redes {
-    padding: 0.5rem 0.5rem 0.5rem 0rem;
-}
+  padding: 0.5rem 0.5rem 0.5rem 0rem; }
 
 .seccion {
-    background-color: #D1E7F2;
-    padding-bottom: 10rem;
-}
-
-
+  background-color: #111440;
+  padding-bottom: 10rem; }
 
 a {
-    text-decoration: none;
-    color: white;
-}
+  text-decoration: none;
+  color: white; }
 
-/* Fin de footer */
-
-.carusel {
-    width: 100%;
-    background-color: #D1E7F2;
-    justify-content: center;
-}
+.body {
+  background-color: #D1E7F2; }
 
 .navbar {
-    background-color: #A2DCF2;
-}
+  background-color: #A2DCF2;
+  color: black; }
+
+.h1 {
+  background-color: #D1E7F2;
+  color: #111440;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: none;
+  align-items: center; }
 
 body {
-    background-color: #D1E7F2;
-}
+  background-color: #D1E7F2; }
+
+.carusel {
+  background-color: #D1E7F2;
+  width: 100%;
+  justify-content: center; }
 
 @media screen and (max-width: 600px) {
-     .container {
-        height: 80vh;
-        display: grid;
-        grid-template-areas: 
-            "img-1"
-            "img-2"
-            "img-3"
-            "img-4"
-            "img-5";
-        justify-content: center;
-        margin-bottom: 30px;
-    }
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        
-        
-
-        
-    }
-    
-
-}
+  .container {
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "img-1" "img-2" "img-3" "img-4" "img-5";
+    justify-content: center;
+    margin-bottom: 30px; }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; } }
