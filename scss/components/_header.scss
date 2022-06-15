@@ -6,7 +6,12 @@
     background-color: $color-primario;
     color: nth($colores, 4);
     @include header (0px, flex, space-between, none, none)
-    
-
 }
 
+.carrito {
+    margin-right: 30px;
+}
+
+.imagen-mistica {
+    margin-left: 30px;
+}

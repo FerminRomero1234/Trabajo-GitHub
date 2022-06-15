@@ -7,6 +7,12 @@
   grid-template-columns: none;
   align-items: none; }
 
+.carrito {
+  margin-right: 30px; }
+
+.imagen-mistica {
+  margin-left: 30px; }
+
 .footer {
   background-color: #111440;
   color: white;
