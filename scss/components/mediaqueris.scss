@@ -1,0 +1,22 @@
+@media screen and (max-width: 600px) {
+    .container {
+       height: 80vh;
+       display: grid;
+       grid-template-areas: 
+           "img-1"
+           "img-2"
+           "img-3"
+           "img-4"
+           "img-5";
+       justify-content: center;
+       margin-bottom: 30px;
+   }
+   footer {
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+
+   }
+
+
+}

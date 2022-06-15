@@ -1,0 +1,51 @@
+
+
+@import "../base/mixins";
+@import "../base/listas";
+
+
+.footer {
+    background-color: $color-primario;
+    color: nth($colores, 4);
+    padding: nth($encabezados, 5);
+}
+
+.ul {
+   list-style: none;
+}
+
+.footer-lista {
+   @include header (0px, grid, space-between, 1fr, none);
+}
+
+
+
+.contenedor-footer {
+   display: grid;
+   grid-template-columns: auto auto;
+
+}
+
+.conectate {
+   margin: auto;
+}
+
+.imagen-redes {
+   padding: 0.5rem 0.5rem 0.5rem 0rem;
+}
+
+.seccion {
+   background-color: nth($colores, 1);
+   padding-bottom: 10rem;
+}
+
+
+a {
+   text-decoration: none;
+   color: nth($colores, 4)
+}
+
+.body {
+   background-color: nth($colores,2);
+} 
+ 

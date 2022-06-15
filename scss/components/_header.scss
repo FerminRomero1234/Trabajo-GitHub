@@ -1,0 +1,12 @@
+
+@import "../base/mixins";
+@import "../base/listas";
+
+.header {
+    background-color: $color-primario;
+    color: nth($colores, 4);
+    @include header (0px, flex, space-between, none, none)
+    
+
+}
+

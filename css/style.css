@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   grid-template-columns: none;
-  align-items: center; }
+  align-items: none; }
 
 .footer {
   background-color: #111440;
