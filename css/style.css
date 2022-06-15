@@ -2,24 +2,9 @@
   background-color: #111440;
   color: white;
   padding: 0px;
-  display: grid;
-  justify-content: space-evenly;
-  grid-template-columns: auto auto auto;
-  align-items: center; }
-
-.icono-mistica {
-  padding: 0px;
-  display: grid;
-  justify-content: none;
-  grid-template-columns: auto;
-  align-items: center; }
-
-.mi-cuenta-index {
-  margin-left: 100rem;
-  padding: none;
-  display: grid;
-  justify-content: none;
-  grid-template-columns: 50fr;
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: none;
   align-items: center; }
 
 .footer {
