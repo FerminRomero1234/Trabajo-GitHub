@@ -65,6 +65,9 @@ a {
 body {
   background-color: #D1E7F2; }
 
+.container {
+  gap: 10px; }
+
 .carusel {
   background-color: #D1E7F2;
   width: 100%;
