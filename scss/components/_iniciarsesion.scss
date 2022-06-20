@@ -44,7 +44,7 @@
   }
   
   .botons {
-    @include iniciar-sesion (100%, nth($colores, 8), 12px, nth($colores, 8));
+    @include iniciar-sesion (100%, nth($colores, 8), 12px, nth($colores, 6));
     border: none;
     margin: 16px 0;
     font-size: 16px;
