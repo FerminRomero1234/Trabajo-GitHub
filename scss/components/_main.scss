@@ -1,6 +1,7 @@
 @import "../base/mixins";
 @import "../base/listas";
 
+/* Cominezo del Main*/
 .h1 {
     background-color: nth($colores,2);
     color: $color-primario;
@@ -10,7 +11,14 @@
 body {
     background-color: nth($colores, 2);
 }
+.camisetas:hover{
+    transition: all 2s;
+    transform: scale(1.1);
+    
+}
 
 .container {
     gap: 10px;
 }
+
+/* Fin del Main */

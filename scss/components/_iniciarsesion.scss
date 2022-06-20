@@ -1,0 +1,53 @@
+@import "../base/mixins";
+@import "../base/listas";
+@import "../base/variables";
+
+/* Comienzo de Iniciar Sesion / Carrito */
+
+/* Es el mismo scss que funciona para el carrito */
+
+.form-register {
+   @include iniciar-sesion (300px, nth($colores, 4), 30px, nth($colores, 5));
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    box-shadow: 7px 13px 37px #000;
+    margin-bottom: nth($encabezados, 5);
+  }
+  
+  .form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+.controls {
+    @include iniciar-sesion (100%, nth($colores, 4), 10px, white);    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-size: 18px;
+    
+  }
+  
+  .form-register p {
+    height: nth($encabezados, 4);
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .form-register a {
+    color: nth($colores, 5);
+    text-decoration: none;
+  }
+  
+  .form-register a:hover {
+    color: nth($colores, 5);
+    text-decoration: underline;
+  }
+  
+  .botons {
+    @include iniciar-sesion (100%, nth($colores, 8), 12px, nth($colores, 8));
+    border: none;
+    margin: 16px 0;
+    font-size: 16px;
+  }
+
+  /* Fin del carrito / iniciar sesion */

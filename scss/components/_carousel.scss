@@ -1,7 +1,12 @@
 @import "../base/listas";
 
+/* Comienzo del carousel */
+
 .carusel {
     background-color: nth($colores, 2);
     width: 100%;
     justify-content: center;
+    margin-top: nth($encabezados, 5);
     }
+
+ /* Fin del Carousel */   

@@ -5,3 +5,10 @@
     grid-template-columns: $columnas;
     align-items: $align;   
 }
+
+@mixin iniciar-sesion ($width, $b-color, $pad, $col) {
+    width: $width;
+    background-color: $b-color;
+    padding: $pad;
+    color: $col;
+}

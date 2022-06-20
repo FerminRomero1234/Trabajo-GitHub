@@ -2,16 +2,62 @@
 @import "../base/mixins";
 @import "../base/listas";
 
-.header {
-    background-color: $color-primario;
-    color: nth($colores, 4);
-    @include header (0px, flex, space-between, none, none)
-}
+/* Comienzo de header */
 
-.carrito {
-    margin-right: 30px;
-}
+* {
+    margin: 0;
+    box-sizing: border-box;  
+  }
+  
+  
+  .header {
+    @include iniciar-sesion (100%, nth($colores, 1), 0, nth($colores,6));
+    height: 80px;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    max-width: 992px ;
+    margin: 0 auto;
+  
+  }
+  
+  .logo {
+    font-size: nth($encabezados, 3);
+    font-weight: bold;
+    padding: 0 nth($encabezados, 4);
+    line-height: 80px;
+    height: 4%;
+  }
+  
+  .nav-menu {
+    display: flex;
+    color: nth($colores, 6);
+    list-style: none;
+  }
+  
+  .nav-menu-item {
+    font-size: 15px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+  
+  }
+  
+  .nav-menu-link {
+    padding: 8px;
+    border-radius: 3px;
+    color: nth($colores, 6);
+  }
+  
+  .nav-menu-link:hover {
+    background-color: nth($colores, 9);
+    transition: 0.5s;
+  }
 
-.imagen-mistica {
-    margin-left: 30px;
-}
+/* Fin de Header */

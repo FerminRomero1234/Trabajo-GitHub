@@ -3,10 +3,11 @@
 @import "../base/mixins";
 @import "../base/listas";
 
+/*Comienzo del footer */
 
 .footer {
     background-color: $color-primario;
-    color: nth($colores, 4);
+    color: nth($colores, 6);
     padding: nth($encabezados, 5);
 }
 
@@ -49,3 +50,4 @@ a {
    background-color: nth($colores,2);
 } 
  
+/* Fin del footer*/
