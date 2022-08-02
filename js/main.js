@@ -1,4 +1,4 @@
-//Interactuar con HTML
+//Interactuaando con HTML
 
 // Busco la propiedad del display
 let carritoLista = document.getElementById("carritoLista").style.display = "none"
