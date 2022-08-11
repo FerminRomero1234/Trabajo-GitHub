@@ -1,208 +1,102 @@
-//Interactuaando con HTML
+// Segunda entrega Proyecto Final
+let carritoIcono = document.querySelector("#carrito")
+let carrito = document.querySelector(".mi-carrito")
+let cerrarCarrito = document.querySelector(".cerrar-carrito")
+let precioTotal = document.getElementById("precioTotal")
+let contadorCarrito = document.getElementById("contadorCarrito")
+let botonComprar = document.getElementById("btnComprar")
 
-// Busco la propiedad del display
-let carritoLista = document.getElementById("carritoLista").style.display = "none"
 
-const productos = [
-    { id: 1, prenda: "Remera Boca", precio: 150 },
-    { id: 2, prenda: "Remera River", precio: 150 },
-    { id: 3, prenda: "Campera Seleccion Argentina", precio: 250 },
-    { id: 4, prenda: "Campera Boca", precio: 250 },
-    { id: 5, prenda: "Campera River", precio: 250 },
-
-];
-
-/* Hago un array */
-const carrito = [];
-
-let producto = parseInt(prompt("Elige un producto para agregar al carrito: \n 1. Remera Boca \n 2. Remera River \n 3.Campera Seleccion Argentina \n 4. Campera Boca \n 5. Campera River"))
-
-let total = 0;
-
-while (producto == NaN || producto > 5 ||producto <= 0) {
-    alert("No existe un producto para ese valor. Vuelva a intentar.")
-    producto = parseInt(prompt("Elige un producto para agregar al carrito: \n 1. Remera Boca \n 2. Remera River \n 3.Campera Seleccion Argentina \n 4. Campera Boca \n 5. Campera River"))
+const compraProcesada = ()=>{
+    alert("¡Su orden fue procesada!")
+    carro.length = 0
+    actualizarCarrito()
 }
 
+botonComprar.addEventListener("click",compraProcesada)
 
-
-switch (producto) {
-case 1:
-    console.log("Has seleccionado  " + producto + "Remera River")
-    total = total + productos[0].precio;
-    carrito.push(productos[0]);
-    abrirCarrito()
-    sumarAlCarrito (0)
-    break;
-case 2:
-    console.log("Has seleccionado  " + producto + "Campera River")
-    total = total + productos[0].precio;
-    carrito.push(productos[0]);
-    abrirCarrito()
-    sumarAlCarrito (1)
-    break;
-case 3:
-    console.log("Has seleccionado " + producto + "Campera Boca")
-    total = total + productos[0].precio;
-    carrito.push(productos[0]);
-    abrirCarrito()
-    sumarAlCarrito (2)
-    break;
-case 4:
-    console.log("Has seleccionado " + producto + "Remera seleccion Argentina")
-    total = total + productos[0].precio;
-    carrito.push(productos[0]);
-    abrirCarrito()
-    sumarAlCarrito (3)
-    break;
-case 5:
-    console.log("Has seleccionado " + producto + "Jogging Boca")
-    total = total + productos[0].precio;
-    carrito.push(productos[0]);
-    abrirCarrito()
-    sumarAlCarrito (4)
-    break;
-
-default:
-    break;
+carritoIcono.onclick = () => {
+    carrito.classList.add("abrir-carrito")
 }
 
-// Se le pregunta si quiere agregar algun producto mas
-
-let confirmacion = confirm("¿Quieres algún producto más?")
-
-while (confirmacion) {
-    producto = parseInt(prompt("Elige un producto para agregar al carrito: \n 1. Remera Boca \n 2. Remera River \n 3.Campera Seleccion Argentina \n 4. Campera Boca \n 5. Campera River"))
+cerrarCarrito.onclick = () => {
+    carrito.classList.remove("abrir-carrito")
 }
 
-switch (producto) {
-    case 1:
-        console.log("Has seleccionado el producto " + producto + ",'" + productos[0].prenda + "': $" + productos[0].precio)
-            total = total + productos[0].precio;
-            carrito.push(productos[0]);
-            sumarAlCarrito (0)
+let carro = []
 
-        break;
-    case 2:
-        console.log("Has seleccionado el producto " + producto + ",'" + productos[0].prenda + "': $" + productos[0].precio)
-            total = total + productos[0].precio;
-            carrito.push(productos[0]);
-            sumarAlCarrito (1)
-        break;
-    case 3:
-        console.log("Has seleccionado el producto " + producto + ",'" + productos[0].prenda + "': $" + productos[0].precio)
-        total = total + productos[0].precio;
-        carrito.push(productos[0]);
-        sumarAlCarrito (2)
-        break;
-    case 4:
-        console.log("Has seleccionado el producto " + producto + ",'" + productos[0].prenda + "': $" + productos[0].precio)
-            total = total + productos[0].precio;
-            carrito.push(productos[0]);
-            sumarAlCarrito (3)
-        break;
-    case 5:
-        console.log("Has seleccionado el producto " + producto + ",'" + productos[0].prenda + "': $" + productos[0].precio)
-            total = total + productos[0].precio;
-            carrito.push(productos[0]);
-            sumarAlCarrito (4)
-        break;
-    
-    default:
-        break;
-}
-
-confirmacion = confirm("¿Quieres algún producto más?")
-
-/* Le pregunto si quiere eliminar un producto */
-let eliminacion = confirm("¿Antes de ver el total, quieres eliminar alguno de los productos?")
-
-/* Hago el while por si dice que si */
-while (eliminacion) {
-    
-    let producto = parseInt(prompt("Elige un producto para agregar al carrito: \n 1. Remera Boca \n 2. Remera River \n 3.Campera Seleccion Argentina \n 4. Campera Boca \n 5. Campera River"))
-
-    /* Si elige un numero que no este entre el 1 y el 5*/
-    while (producto == NaN || producto > 9 || producto <= 0) {
-        producto = parseInt(prompt("Elige un producto para agregar al carrito: \n 1. Remera Boca \n 2. Remera River \n 3.Campera Seleccion Argentina \n 4. Campera Boca \n 5. Campera River"))
+document.addEventListener("DOMContentLoaded"), () => {
+    if (localStorage.getItem("carro")) {
+        carro = JSON.parse(localStorage.getItem("carro"))
+        actualizarCarrito()
     }
+}
 
-    let index = carrito.findIndex(propiedad => propiedad.id == producto)
 
-    if (index != -1) {
-        total = total - carrito[index].precio
-        carrito.splice(index, 1)
-        document.getElementById.apply("carritoLista").removeChild(document.getElementById("carritoLista").children[index])
+const contenedorProductos = document.getElementById("galeria")
+
+productos.forEach((producto) => {
+    const div = document.createElement("div")
+    div.classList.add("caja-carrito")
+    div.innerHTML = `
+    <div class="producto" id="producto">
+    <img src="${producto.img}"  alt="imagen producto" class="imagen-producto">
+    <h2 class="titulo">${producto.nombre}</h2>
+    <p class="precio">$${producto.precio}</p>
+    <button class="agregar-carrito" id="agregar${producto.id}">Agregar al Carrito</button>
+</div>`
+    contenedorProductos.appendChild(div)
+
+    let boton = document.getElementById(`agregar${producto.id}`)
+
+    boton.addEventListener("click", () => {
+        agregarAlCarrito(producto.id)
+    })
+})
+
+const agregarAlCarrito = (prodId) => {
+    const existe = carro.some(prod => prod.id === prodId)
+    if (existe) {
+        const prod = carro.map(prod => {
+            if (prod.id === prodId) {
+                prod.cantidad++
+            }
+        })
     }
-
-
-    /* Si elige un numero que no tiene prenda */
     else {
-        alert("¡Ese producto no esta en su carrito!")
-    }
-
-    // Pregunto si quiere eliminar el producto 
-    eliminacion = confirm("¿Desea eliminar otro producto?")
-}
-
-
-let precioTotal = document.createElement("h2")
-precioTotal.innerHTML = `Total (+IVA): ${iva(total)}`
-precioTotal.style.margin = "1rem"
-precioTotal.style.backgroundColor = "black"
-precioTotal.style.color = "white"
-document.getElementById("carritoLista").appendChild(precioTotal)
-
-//Precio final
-for (const cuenta of carrito) {
-    console.log("Producto: " + cuenta.prenda + "\nPrecio: " + cuenta.precio)
-
-}
-
-// Genero un numero de compra
-function codigoUsuario(min, max) {
-    return (Math.random() * (max - min) + min).toFixed();
-}
-
-// Hago un mapa para el sort de Menor a mayor
-const precios = productos.map((el) => {
-    return {
-        precio: el.precio,
-        prenda: el.prenda
+        const item = productos.find((prod) => prod.id === prodId)
+        carro.push(item)
+        console.log(carro)
     }
 }
-)
 
-// Hago un mapa para el sort de Mayor a menor
-const precios2 = productos.map((el) => {
-    return {
-        precio: el.precio,
-        producto: el.producto
-    }
-}
-)
-
-function sumarAlCarrito(valor) {
-    let prod1 = document.createElement("div")
-    prod1.innerHTML = `<h3> ${productos[valor].producto} </h3>
-        <p> $${iva(productos[valor].precio)} </p>`
-    prod1.style.margin = "1rem"
-    return document.getElementById("carritoLista").appendChild(prod1)
+const eliminarDelCarrito = (prodId) => {
+    const item = carro.find((prod) => prod.id === prodId)
+    const index = carro.indexOf(item)
+    carro.splice(index, 1)
+    actualizarCarrito()
 }
 
-// Esta función cambia el display del carrito de none a block 
-function abrirCarrito() {
-    carritoLista = document.getElementById("carritoLista").style.display = "block"
-}
+const contenedorCarrito = document.getElementById("carritoContenido")
 
-// Esta función cambia el display del carrito de block a none 
-function cerrarCarrito() {
-    carritoLista = document.getElementById("carritoLista").style.display = "none"
+const actualizarCarrito = () => {
+    contenedorCarrito.innerHTML = ""
+    carro.forEach((prod) => {
+        const div = document.createElement("div")
+        div.className = ("caja-carrito")
+        div.innerHTML = `
+        <img src="${prod.img}" alt="producto1" class="carrito-imagen">
+        <div class="detalles">
+            <div class="titulo-producto">${prod.nombre}</div>
+            <div id="precioCarrito" class="precio-carrito">${prod.precio}</div>
+            <input readonly = "readonly" id="cantidadCarrito" type="number" value="${prod.cantidad}" class="cantidad-carrito">
+        </div>
+        <img class="remover-carrito" onclick = "eliminarDelCarrito(${prod.id})"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ9JREFUSEvt1csRwjAMRdGTSigB6IQSSAeUQCdQAp0AHZBKYFjwCzFyMgmbREuP5l3p2ZYKA0cxsL4cwBq7RCEl9r+KjAALHIMulzilcuqAa0+WPXX/DuipgZdM6g66WvWlNw7Ao8u6bU3nnSyaAI1P/93vyaIRWNRmAGZ/tAtmbZRxxn1BfURq2K2wxTwTUmGDQy4gUzdOi3ZyrBBk3AB+wyoZJl1mqQAAAABJRU5ErkJggg==" />
+        `
+        contenedorCarrito.appendChild(div)
+        localStorage.setItem("carro", JSON.stringify(carro))
+    })
+    contadorCarrito.innerText = carro.length
+    precioTotal.innerText = carro.reduce((acc, prod) => acc + prod.precio, 0)
 }
-// Debug de Lista con precios de Menor a Mayor 
-console.log("Precios Menor a Mayor:")
-console.log(precios.sort((a, b) => a.precio - b.precio))
-
-// Debug de Lista con precios de Mayor a Menor 
-console.log("Precios Mayor a Menor:")
-console.log(precios2.sort((a, b) => b.precio - a.precio)) 

@@ -37,11 +37,19 @@
             <nav class="nav">
                 <a href="paginas/inicio.html"><img src="imagenes/misitica.png" alt="logo mistica redonda" width="70"
                         height="70" class="imagen-mistica"></a>
-                </button>
+                        <li><span class="material-symbols-outlined carrito" id="carrito">
+                            shopping_cart
+                            shopping_cart <span id="contadorCarrito" class="contador-carrito">0</span>
+                        </span></li>    
+                        <div class="contenido-carrito" id="carritoContenido">
+                            <div class="caja-carrito" id="cajaCarrito">
+                            </div>
+                            <div class="precio-total" id="precioTotal">$0</div>
                 <ul class="nav-menu">
                     </li>
                     <li class="nav-menu-item"><a href="paginas/carrito.html" class="nav-menu-link">Carrito</a>
                     </li>
+                    
                     <li class="nav-menu-item"><a href="paginas/iniciarsesion.html" class="nav-menu-link">Iniciar
                             Sesion</a>
                     </li>
@@ -220,6 +228,9 @@
         </div>
     </main>
 
+    <section class="galeria" id="galeria">
+    </section>
+
     <!-- Fin del Main -->
 
     <!-- Comienzo del Footer -->
@@ -262,6 +273,8 @@
 
 
     <!-- Scrpit -->
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
