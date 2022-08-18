@@ -1,4 +1,4 @@
-// Optimizando el proyecto final
+// Incorporando librerias
 
 let carritoIcono = document.querySelector("#carrito")
 let carrito = document.querySelector(".mi-carrito")
@@ -9,7 +9,31 @@ let botonComprar = document.getElementById("btnComprar")
 
 /* Cuando tocamos el boton de "Comprar", se resetea el carrito */
 const compraProcesada = () => {
-    alert("¡Su orden fue procesada!")
+    if (carro.length == 0) {
+        /* Utilizo un Sweet Alert por si no hay productos en el carrito y el usuario clickea "Comprar" */
+        Swal.fire({
+            title: "Error",
+            titleText: "No has seleccionado ningún producto",
+            iconColor: "red",
+            icon: "error",
+            color: "black",
+            confirmButtonText: "OK",
+            confirmButtonColor: "black",
+            padding: "1rem 0.3rem"
+        })
+    }
+    else {
+        /* Utilizo un Sweet Alert para decir que se proceso la compra */
+        Swal.fire({
+            title: "¡Su compra ha sido procesada!",
+            iconColor: "#0263a0",
+            icon: "success",
+            color: "black",
+            confirmButtonText: "OK",
+            confirmButtonColor: "black",
+            padding: "1rem 0.3rem"
+        })
+    }
     /* Spread del Carrito */
     console.log(...carro)
     carro.length = 0
@@ -72,6 +96,18 @@ const agregarAlCarrito = (prodId) => {
         carro.push(item)
         console.log(carro)
     }
+
+
+    Toastify({
+        text: "Añadiste un producto",
+        duration: 1500,
+        style: {
+            background: "linear-gradient(to right, #0263a0, #01243B)",
+            color: "white",
+        },
+        close: true,
+        gravity: "bottom",
+    }).showToast();
 
 // elimina el producto
 const eliminarDelCarrito = (prodId) => {
