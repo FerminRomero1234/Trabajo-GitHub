@@ -25,11 +25,36 @@
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="Buscar Pro" />
+    <meta property="og:url" content="https://buscarpro.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+        content="Buscar Pro te ofrece los mejores accesorios y cámaras de acción, para inmortalizar tus nuevas experiencias extremas. Aprovecha las mejores ofertas que te traemos y adquirí lo mejor!" />
+    <meta property="og:image" content="https://imgur.com/PQdGklh" />
 
 
 </head>
 
 <body>
+
+     <!-- Barra customizada -->
+     <style>
+        /* Ancho barra */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Barra */
+        ::-webkit-scrollbar-thumb {
+            background: black;
+        }
+
+        /* Barra : Hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0263a0;
+        }
+    </style>
 
     <!-- Cominezo del Header -->
 
@@ -39,8 +64,7 @@
                 <a href="paginas/inicio.html"><img src="imagenes/misitica.png" alt="logo mistica redonda" width="70"
                         height="70" class="imagen-mistica"></a>
                         <li><span class="material-symbols-outlined carrito" id="carrito">
-                            shopping_cart
-                            shopping_cart <span id="contadorCarrito" class="contador-carrito">0</span>
+                        <span id="contadorCarrito" class="contador-carrito">0</span>
                         </span></li>    
                         <div class="contenido-carrito" id="carritoContenido">
                             <div class="caja-carrito" id="cajaCarrito">
@@ -142,8 +166,13 @@
 
     <!-- Article -->
     <article>
-        <div class="h1">
-            <h1 class="h1">Mistica Redonda, las mejores prendas deportivas.</h1>
+        <div class="titulo-pagina">
+            <h1 class="animate__animated animate__fadeInDown">
+                Mistica Redonda
+            </h1>
+            <h2 class="animate__animated animate__fadeIn">
+                Las mejores prendas deportivas
+            </h2>
         </div>
     </article>
 
@@ -257,9 +286,9 @@
                     <p class="col-12 ">Contectate con Mistica Redonda:</p>
                 </div>
                 <div class="row">
-                    <a href="https://twitter.com/RedondaMistica"><img class="imagen-redes col-3"
+                    <a href="https://twitter.com/RedondaMistica" target="_blank"><img class="imagen-redes col-3"
                             src="imagenes/logo-twitter-sinfondo.png" alt="logo twitter" width="25" height="50"></a> <a
-                        href="https://instagram.com/misticaredonda"><img src="imagenes/logoig-sinfondo.png"
+                        href="https://instagram.com/misticaredonda" target="_blank"><img src="imagenes/logoig-sinfondo.png"
                             alt="logo instagram" class="imagen-redes col-3 " width="50" height="50"></a>
                 </div>
             </div>
